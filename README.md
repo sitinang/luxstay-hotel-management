@@ -34,8 +34,8 @@ LUXSTAY is a luxury hotel management system built with a modern framework to pro
 ### 🚀 Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/sitinang/hotel-production.git
-   cd hotel-production
+   git clone https://github.com/sitinang/luxstay-hotel-management.git
+   cd luxstay-hotel-management
    ```
 2. **Install Backend dependencies**:
    ```bash
