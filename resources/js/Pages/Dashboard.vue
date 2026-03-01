@@ -698,13 +698,7 @@ onUnmounted(() => {
             <!-- MAIN CONTENT AREA -->
             <main class="flex-1 overflow-y-auto relative focus:outline-none">
                 
-                <!-- Mobile Header -->
-                <div class="md:hidden flex items-center justify-between px-6 py-4 bg-white border-b border-slate-200 sticky top-0 z-10">
-                    <ApplicationLogo :iconOnly="false" />
-                    <button class="text-slate-500 hover:text-navy-900">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
+
 
                 <div class="p-6 lg:p-10 max-w-7xl mx-auto space-y-6 pb-20">
                     <!-- No Spacer - Reduced top margin -->

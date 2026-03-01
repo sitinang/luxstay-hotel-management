@@ -78,7 +78,7 @@ onMounted(() => {
     <MainLayout :title="$t('find_your_comfort')">
         
         <!-- HERO SECTION -->
-        <section class="relative h-[40vh] lg:h-[50vh] flex items-center justify-center overflow-hidden">
+        <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden py-20 lg:py-0">
             <div class="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop" 
                      class="w-full h-full object-cover scale-105" 
@@ -86,11 +86,11 @@ onMounted(() => {
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-50 via-navy-900/60 to-transparent"></div>
             </div>
             
-            <div class="relative z-10 text-center text-white space-y-4 px-4 animate-fade-in-up">
-                <h1 class="text-4xl lg:text-6xl font-serif font-bold leading-tight">
+            <div class="relative z-10 text-center text-white space-y-4 px-4 animate-fade-in-up mt-10 lg:mt-0">
+                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-serif font-bold leading-tight">
                     {{ $t('hero_title').split(' ')[0] }} <span class="italic text-gold-400">{{ $t('hero_title').split(' ')[1] }}</span> {{ $t('hero_title').split(' ').slice(2).join(' ') }}
                 </h1>
-                <p class="max-w-2xl mx-auto text-gray-200 font-light text-lg">
+                <p class="max-w-2xl mx-auto text-gray-200 font-light text-base sm:text-lg">
                     {{ $t('room_list_desc') }}
                 </p>
             </div>
@@ -143,18 +143,18 @@ onMounted(() => {
 
             <!-- Summary Bar: Shown when user already filtered -->
             <div v-else class="bg-navy-900 text-white rounded-2xl shadow-xl p-4 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 border border-navy-800 animate-fade-in-up">
-                <div class="flex items-center gap-6">
-                    <div class="flex flex-col">
+                <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                    <div class="flex flex-col items-center sm:items-start">
                         <span class="text-[10px] uppercase tracking-widest text-gold-500 font-bold mb-1">{{ $t('period') }}</span>
-                        <div class="flex items-center gap-2 font-medium text-sm">
+                        <div class="flex items-center gap-2 font-medium text-xs sm:text-sm">
                             <i class="fa-solid fa-calendar-day text-gold-500"></i>
                             {{ props.filters.check_in }} <i class="fa-solid fa-arrow-right text-[10px] mx-1"></i> {{ props.filters.check_out }}
                         </div>
                     </div>
-                    <div class="w-px h-8 bg-white/10 hidden sm:block"></div>
-                    <div class="flex flex-col">
+                    <div class="w-full sm:w-px h-px sm:h-8 bg-white/10"></div>
+                    <div class="flex flex-col items-center sm:items-start">
                         <span class="text-[10px] uppercase tracking-widest text-gold-500 font-bold mb-1">{{ $t('capacity') }}</span>
-                        <div class="flex items-center gap-2 font-medium text-sm">
+                        <div class="flex items-center gap-2 font-medium text-xs sm:text-sm">
                             <i class="fa-solid fa-user-group text-gold-500 text-xs"></i>
                             {{ props.filters.guests }} {{ props.filters.guests > 1 ? $t('guests') : $t('guests') }}
                         </div>

@@ -108,16 +108,16 @@ const submit = () => {
 <template>
     <MainLayout :title="roomType?.name || $t('room_details')">
         <template v-if="roomType">
-            <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+            <section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden py-20 lg:py-0">
                 <div class="absolute inset-0 z-0">
                     <img :src="roomType.image" 
                          class="w-full h-full object-cover scale-105 animate-slow-zoom" 
                          alt="Room Banner">
                     <div class="absolute inset-0 bg-navy-900/50"></div>
                 </div>
-                <div class="relative z-10 text-center text-white space-y-4">
-                    <span class="text-gold-400 font-bold tracking-widest uppercase text-sm">{{ $t('room_details') }}</span>
-                    <h1 class="text-5xl lg:text-7xl font-serif font-bold">{{ roomType.name }}</h1>
+                <div class="relative z-10 text-center text-white space-y-4 pt-10 lg:pt-0">
+                    <span class="text-gold-400 font-bold tracking-widest uppercase text-xs sm:text-sm px-4">{{ $t('room_details') }}</span>
+                    <h1 class="text-3xl sm:text-5xl lg:text-7xl font-serif font-bold px-4">{{ roomType.name }}</h1>
                 </div>
             </section>
 
@@ -125,9 +125,9 @@ const submit = () => {
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
                         <!-- Left Column: Info -->
-                        <div class="lg:col-span-2 space-y-12">
+                        <div class="lg:col-span-2 space-y-8 lg:space-y-12">
                             <div class="space-y-4">
-                                <div class="aspect-video rounded-[40px] overflow-hidden shadow-2xl bg-stone-100">
+                                <div class="aspect-video rounded-2xl lg:rounded-[40px] overflow-hidden shadow-2xl bg-stone-100">
                                     <img :src="activeImage || roomType.image" :alt="roomType.name" class="w-full h-full object-cover transition-all duration-500">
                                 </div>
                                 <!-- Mini Gallery -->
@@ -203,10 +203,10 @@ const submit = () => {
 
                         <!-- Right Column: Booking Widget -->
                         <div class="lg:col-span-1">
-                            <div class="sticky top-32 bg-white border border-stone-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] rounded-[40px] p-10">
-                                <div class="mb-8 border-b border-stone-100 pb-6">
-                                    <h3 class="text-2xl font-serif font-bold text-navy-900 mb-2">{{ $t('booking_details') }}</h3>
-                                    <p class="text-sm text-gray-500">{{ $t('booking_desc') }}</p>
+                            <div class="sticky top-32 bg-white border border-stone-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] rounded-2xl lg:rounded-[40px] p-6 sm:p-10">
+                                <div class="mb-6 lg:mb-8 border-b border-stone-100 pb-6">
+                                    <h3 class="text-xl sm:text-2xl font-serif font-bold text-navy-900 mb-2">{{ $t('booking_details') }}</h3>
+                                    <p class="text-xs sm:text-sm text-gray-500">{{ $t('booking_desc') }}</p>
                                 </div>
 
                                 <form @submit.prevent="submit" class="space-y-6">

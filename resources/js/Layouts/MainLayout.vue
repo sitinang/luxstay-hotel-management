@@ -163,18 +163,18 @@ defineProps({
         </main>
 
         <!-- FOOTER -->
-        <footer class="bg-navy-900 text-white pt-24 pb-10">
+        <footer class="bg-navy-900 text-white pt-16 lg:pt-24 pb-10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 lg:mb-20">
                     <!-- Brand -->
-                    <div class="lg:col-span-1">
+                    <div class="lg:col-span-1 flex flex-col items-center sm:items-start text-center sm:text-left">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-10 h-10 bg-gold-500 text-navy-900 rounded-full flex items-center justify-center text-xl font-serif italic font-bold">
                                 <i class="fa-solid fa-feather-pointed"></i>
                             </div>
                             <span class="text-xl font-serif font-bold tracking-widest text-white">LUXSTAY</span>
                         </div>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs sm:max-w-none">
                             {{ $t('footer_symbol_hospitality') }}
                         </p>
                         <div class="flex gap-4">
@@ -185,7 +185,7 @@ defineProps({
                     </div>
 
                     <!-- Links -->
-                    <div>
+                    <div class="text-center sm:text-left">
                         <h4 class="text-lg font-serif font-bold mb-6 text-gold-400">{{ $t('quick_links') }}</h4>
                         <ul class="space-y-3 text-sm text-gray-300">
                             <li><Link :href="route('about')" class="hover:text-white hover:pl-2 transition-all">{{ $t('about_us') }}</Link></li>
@@ -195,10 +195,10 @@ defineProps({
                     </div>
 
                     <!-- Contact -->
-                    <div>
+                    <div class="text-center sm:text-left">
                         <h4 class="text-lg font-serif font-bold mb-6 text-gold-400">{{ $t('contact_us') }}</h4>
-                        <ul class="space-y-4 text-sm text-gray-300">
-                            <li class="flex items-start gap-3">
+                        <ul class="space-y-4 text-sm text-gray-300 flex flex-col items-center sm:items-start">
+                            <li class="flex items-start gap-3 justify-center sm:justify-start">
                                 <i class="fa-solid fa-location-dot mt-1 text-gold-500"></i>
                                 <span>Jl. Sudirman No. 88,<br>Jakarta Pusat, Indonesia</span>
                             </li>
@@ -214,13 +214,13 @@ defineProps({
                     </div>
 
                     <!-- Newsletter -->
-                    <div>
+                    <div class="text-center sm:text-left">
                         <h4 class="text-lg font-serif font-bold mb-6 text-gold-400">{{ $t('newsletter') }}</h4>
                         <p class="text-sm text-gray-400 mb-4">{{ $t('subscribe_desc') }}</p>
-                        <form class="flex flex-col gap-3">
-                            <input type="email" :placeholder="$t('your_email')" class="bg-white/10 border border-white/20 px-4 py-3 rounded-sm text-white focus:border-gold-500 outline-none transition-colors">
+                        <form class="flex flex-col gap-3 max-w-xs mx-auto sm:mx-0">
+                            <input type="email" :placeholder="$t('your_email')" class="bg-white/10 border border-white/20 px-4 py-3 rounded-sm text-white focus:border-gold-500 outline-none transition-colors text-sm">
                             <div class="btn-premium-container">
-                                <button class="btn-premium-inner w-full py-3 text-navy-900 font-bold uppercase text-xs tracking-widest hover:bg-white transition-colors">
+                                <button class="btn-premium-inner w-full py-3 text-navy-900 font-bold uppercase text-[10px] tracking-widest hover:bg-white transition-colors">
                                     {{ $t('subscribe') }}
                                 </button>
                             </div>

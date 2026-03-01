@@ -9,9 +9,30 @@
 LUXSTAY is a luxury hotel management system built with a modern framework to provide a seamless, efficient, and visually stunning operational experience. This project serves as a showcase of full-stack development capabilities using **Laravel**, **Vue.js**, and **Tailwind CSS**.
 
 ### 🌐 Live Links
-- **Live Demo**: [booking-sistemhotel.warwebsuwarna.com](http://booking-sistemhotel.warwebsuwarna.com)
 - **Developer Website**: [warwebsuwarna.com](http://warwebsuwarna.com)
 
+### 📸 Screenshots
+
+<div align="center">
+  <p><b>Landing Page (Desktop & Mobile)</b></p>
+  <img src="screenshots/landing-page-desktop.webp" width="700" alt="Landing Page Desktop">
+  <img src="screenshots/landing-page-mobile.webp" width="200" alt="Landing Page Mobile">
+  <br><br>
+  
+  <p><b>Admin Dashboard (Desktop & Mobile)</b></p>
+  <img src="screenshots/dashboard-desktop.webp" width="700" alt="Admin Dashboard Desktop">
+  <img src="screenshots/dashboard-mobile.webp" width="200" alt="Admin Dashboard Mobile">
+  <br><br>
+
+  <p><b>Room Management & Listing</b></p>
+  <img src="screenshots/room-list.webp" width="700" alt="Room List Desktop">
+  <img src="screenshots/room-list-mobile.webp" width="200" alt="Room List Mobile">
+  <br><br>
+
+  <p><b>User Booking System</b></p>
+  <img src="screenshots/user-booking.webp" width="700" alt="User Booking Desktop">
+  <img src="screenshots/user-booking-mobile.webp" width="200" alt="User Booking Mobile">
+</div>
 ### ✨ Key Features
 - **Real-time Dashboard**: Real-time visualization of hotel statistics (revenue, occupancy, trends).
 - **Room & Room Type Management**: Room inventory management with category support and photo galleries.
@@ -78,7 +99,30 @@ LuxStay adalah sistem manajemen hotel mewah yang dibangun dengan framework moder
 - **Desain Premium & Responsif**: Antarmuka pengguna yang elegan, menggunakan palet warna navy dan emas, dioptimalkan untuk berbagai perangkat.
 - **Manajemen Admin**: Perintah Artisan khusus untuk mengelola administrator tanpa akses database langsung.
 
-### 📸 Deskripsi Refactoring
+### 📸 Cuplikan Layar (Screenshots)
+
+<div align="center">
+  <p><b>Halaman Utama (Desktop & Mobile)</b></p>
+  <img src="screenshots/landing-page-desktop.webp" width="700" alt="Halaman Utama Desktop">
+  <img src="screenshots/landing-page-mobile.webp" width="200" alt="Halaman Utama Mobile">
+  <br><br>
+  
+  <p><b>Dashboard Admin (Desktop & Mobile)</b></p>
+  <img src="screenshots/dashboard-desktop.webp" width="700" alt="Dashboard Admin Desktop">
+  <img src="screenshots/dashboard-mobile.webp" width="200" alt="Dashboard Admin Mobile">
+  <br><br>
+
+  <p><b>Manajemen & Daftar Kamar</b></p>
+  <img src="screenshots/room-list.webp" width="700" alt="Daftar Kamar Desktop">
+  <img src="screenshots/room-list-mobile.webp" width="200" alt="Daftar Kamar Mobile">
+  <br><br>
+
+  <p><b>Sistem Pemesanan (Booking)</b></p>
+  <img src="screenshots/user-booking.webp" width="700" alt="Pemesanan Desktop">
+  <img src="screenshots/user-booking-mobile.webp" width="200" alt="Pemesanan Mobile">
+</div>
+
+### 🛠️ Deskripsi Refactoring
 Proyek ini telah melalui proses refactoring besar-besaran untuk meningkatkan maintainability:
 - **Modularisasi Komponen**: Memecah halaman `Dashboard.vue` yang besar menjadi sub-komponen tab yang reusable.
 - **Abstraksi UI**: Membuat komponen UI global seperti `StatCard` dan `BookingWidget`.

@@ -57,25 +57,25 @@ onMounted(() => {
 <template>
     <MainLayout :title="$t('exclusive_facilities')">
         <!-- Header Section -->
-        <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <section class="relative min-h-[40vh] lg:h-[60vh] flex items-center justify-center overflow-hidden py-20 lg:py-0">
             <div class="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop" 
                      class="w-full h-full object-cover scale-105 animate-slow-zoom" 
                      alt="Pool Area">
                 <div class="absolute inset-0 bg-navy-900/60"></div>
             </div>
-            <div class="relative z-10 text-center text-white space-y-4 px-4">
-                <span class="text-gold-400 font-bold tracking-widest uppercase text-sm">{{ $t('unforgettable_experience') }}</span>
-                <h1 class="text-5xl lg:text-7xl font-serif font-bold leading-tight">{{ $t('starlit_facilities') }}</h1>
+            <div class="relative z-10 text-center text-white space-y-4 px-4 pt-10 lg:pt-0">
+                <span class="text-gold-400 font-bold tracking-widest uppercase text-xs sm:text-sm">{{ $t('unforgettable_experience') }}</span>
+                <h1 class="text-3xl sm:text-5xl lg:text-7xl font-serif font-bold leading-tight">{{ $t('starlit_facilities') }}</h1>
             </div>
         </section>
 
         <!-- Gallery Section -->
-        <section class="py-32 bg-white">
+        <section class="py-20 lg:py-32 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-24 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-                    <h2 class="text-4xl lg:text-5xl font-serif font-bold text-navy-900 mb-6">{{ $t('caring_moments') }}</h2>
-                    <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                <div class="text-center mb-16 lg:mb-24 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy-900 mb-6">{{ $t('caring_moments') }}</h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
                         {{ $t('facilities_desc') }}
                     </p>
                 </div>

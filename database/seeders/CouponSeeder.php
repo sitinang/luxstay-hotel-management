@@ -19,7 +19,7 @@ class CouponSeeder extends Seeder
             'is_active' => true
         ]);
         \App\Models\Coupon::create([
-            'code' => 'OASIS50',
+            'code' => 'LUX50',
             'discount_amount' => 50000,
             'discount_type' => 'fixed',
             'is_active' => true

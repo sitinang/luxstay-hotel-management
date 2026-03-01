@@ -37,7 +37,7 @@ const animateOnScroll = () => {
 <template>
     <MainLayout :title="$t('welcome_title')">
         <!-- HERO SECTION -->
-        <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+        <section class="relative min-h-screen lg:h-screen lg:min-h-[700px] flex items-center justify-center overflow-hidden py-20 lg:py-0">
             <!-- Background Image -->
             <div class="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop" 
@@ -46,16 +46,16 @@ const animateOnScroll = () => {
                 <div class="absolute inset-0 bg-navy-900/40 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
             </div>
 
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-0">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="text-white space-y-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-1000 ease-out">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-white/30 rounded-full bg-white/10 backdrop-blur-sm text-sm tracking-widest uppercase text-gold-300">
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="text-white space-y-6 lg:space-y-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-1000 ease-out pt-16 lg:pt-0">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-white/30 rounded-full bg-white/10 backdrop-blur-sm text-xs sm:text-sm tracking-widest uppercase text-gold-300">
                             <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
                             {{ $t('premium_choice') }}
                         </div>
-                        <h1 class="text-5xl lg:text-7xl font-serif font-bold leading-tight">
-                            {{ $t('hero_title').split(' ')[0] }} <br>
-                            <span class="italic text-gold-400">{{ $t('hero_title').split(' ')[1] }}</span> <br>
+                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif font-bold leading-tight">
+                            {{ $t('hero_title').split(' ')[0] }} <br class="hidden sm:block">
+                            <span class="italic text-gold-400">{{ $t('hero_title').split(' ')[1] }}</span> <br class="hidden sm:block">
                             {{ $t('hero_title').split(' ').slice(2).join(' ') }}
                         </h1>
                         <p class="text-lg text-gray-200 max-w-lg leading-relaxed font-light border-l-2 border-gold-500 pl-6">

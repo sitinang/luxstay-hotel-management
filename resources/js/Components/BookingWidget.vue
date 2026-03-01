@@ -24,14 +24,14 @@ const handleBooking = (e) => {
 </script>
 
 <template>
-    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-2xl">
-        <div class="flex items-center justify-between mb-6 border-b border-white/20 pb-4">
-            <h3 class="text-white font-serif text-2xl">{{ $t('reservation') }}</h3>
-            <span class="text-gold-300 text-sm font-bold">{{ $t('best_rate') }}</span>
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-5 sm:p-8 rounded-2xl shadow-2xl">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6 border-b border-white/20 pb-4 gap-2 sm:gap-0">
+            <h3 class="text-white font-serif text-xl sm:text-2xl">{{ $t('reservation') }}</h3>
+            <span class="text-gold-300 text-[10px] sm:text-sm font-bold uppercase tracking-widest">{{ $t('best_rate') }}</span>
         </div>
         
         <form @submit="handleBooking" class="space-y-4">
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="group">
                     <label class="block text-gray-300 text-xs uppercase tracking-wider mb-2">{{ $t('check_in') }}</label>
                     <div class="relative">
