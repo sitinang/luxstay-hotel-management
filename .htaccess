@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Mengalihkan seluruh request ke dalam folder public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Memblokir akses langsung ke file atau folder tersembunyi (berawalan titik) seperti .env, .git, dll.
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

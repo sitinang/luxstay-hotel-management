@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    @keyframes rotate-border {
+        from {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        to {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    .btn-premium-container {
+        --btn-bg: #d4af37;
+        --btn-border-glow: rgba(255, 255, 255, 0.8);
+        --btn-shadow: rgba(212, 175, 55, 0.25);
+        --btn-shadow-hover: rgba(212, 175, 55, 0.4);
+
+        position: relative;
+        padding: 2px;
+        background: var(--btn-bg);
+        overflow: hidden;
+        display: inline-block;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 15px -3px var(--btn-shadow);
+        border-radius: 4px;
+    }
+
+    .btn-premium-container.btn-navy {
+        --btn-bg: #0f172a;
+        /* navy-900 */
+        --btn-border-glow: rgba(212, 175, 55, 0.8);
+        /* gold glow */
+        --btn-shadow: rgba(15, 23, 42, 0.25);
+        --btn-shadow-hover: rgba(15, 23, 42, 0.4);
+    }
+
+    .btn-premium-container.btn-rounded {
+        border-radius: 9999px;
+    }
+
+    .btn-premium-container::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background: conic-gradient(transparent, transparent, transparent, var(--btn-border-glow));
+        transform: translate(-50%, -50%);
+        animation: rotate-border 4s linear infinite;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 0;
+    }
+
+    .btn-premium-container:hover::before {
+        opacity: 1;
+    }
+
+    .btn-premium-container:hover {
+        box-shadow: 0 20px 25px -5px var(--btn-shadow-hover);
+        transform: translateY(-2px);
+    }
+
+    .btn-premium-container .btn-premium-inner {
+        position: relative;
+        z-index: 1;
+        display: block;
+        background: var(--btn-bg);
+        color: white;
+        text-align: center;
+        transition: background 0.3s;
+        height: 100%;
+        width: 100%;
+    }
+
+    .btn-premium-container.btn-rounded .btn-premium-inner {
+        border-radius: 9999px;
+    }
+
+    .btn-premium-container.btn-trace {
+        --btn-border-glow: #000000;
+    }
+
+    .btn-premium-container.btn-trace::before {
+        opacity: 1;
+    }
+
+    .btn-premium-container.btn-trace .btn-premium-inner {
+        padding-top: calc(1.25rem - 2px);
+        padding-bottom: calc(1.25rem - 2px);
+    }
+}
